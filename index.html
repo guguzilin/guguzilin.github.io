@@ -84,6 +84,23 @@ img {
         0 0 10px rgba(80,150,255,0.5),
         0 0 20px rgba(80,150,255,0.3);
 }
+
+.gct-img {
+       width: 100%;          /* ⬅️ 限制在容器内 */
+    height: auto;
+
+    flex-shrink: 0;     /* ⬅️ 防止被压扁（关键） */
+    align-self: center; /* ⬅️ 避免被拉伸 */
+
+    border-radius: 10px;
+
+    border: 2px solid rgba(120,180,255,0.6);
+
+    box-shadow:
+        0 0 10px rgba(80,150,255,0.5),
+        0 0 20px rgba(80,150,255,0.3);
+}
+
 .hobby-scroll {
     display: flex;
     overflow-x: auto;
@@ -248,7 +265,6 @@ iframe {
                     camera-controls>
                 </model-viewer>
             </div>
-            <!-- <iframe id="qfPDF" src="pdfs/qf1.pdf"></iframe> -->
         </div>
 
     </div>
@@ -408,7 +424,6 @@ function prevQF(){
 
 function updateQF(){
     document.getElementById("qfViewer").src = "models/qf" + qfIndex + ".glb";
-    document.getElementById("qfPDF").src = "pdfs/qf" + qfIndex + ".pdf";
 }
 
 
